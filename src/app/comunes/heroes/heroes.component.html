@@ -1,19 +1,11 @@
-<div class="container mt-2">
-    <p class="fs-1">Héroes <small class="fs-2 text-muted">Marvel y DC</small></p>
-    <hr>
-    <div class="row row-cols-3 row-cols-md-3 g-4">
-        <div *ngFor="let heroe of heroes" class="col">
-            <div class="card">
-                <img [src]="heroe.img" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{heroe.nombre}}</h5>
-                    <p class="card-text">{{heroe.bio}}</p>
-                    <p class="text-muted">{{heroe.aparicion}}</p>
-                    <div class="d-grid gap-2">
-                        <button [routerLink]="['/heroe',heroe.id]" class="btn btn-outline-primary btn-block">Ver mas...</button>
-                    </div>
-                </div>
-            </div>
+<div class="card">
+    <img [src]="nuevo.img" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{nuevo.nombre}}</h5>
+        <p class="card-text">{{nuevo.bio}}</p>
+        <p class="text-muted">{{nuevo.aparicion}}</p>
+        <div class="d-grid gap-2">
+            <button [routerLink]="['/heroe',codigo]" class="btn btn-outline-primary btn-block">Ver mas...</button>
         </div>
-    </div>
-</div>
+    </div> 
+</div> 

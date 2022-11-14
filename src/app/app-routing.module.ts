@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeroeComponent } from './comunes/heroe/heroe.component';
-import { HeroesComponent } from './comunes/heroes/heroes.component';
+import { HeaderComponent } from './comunes/header/header.component';
 
 const routes: Routes = [
-  {path:"", component: HeroesComponent},
-  {path:"heroes", component: HeroesComponent},
-  {path: 'heroe/:id', component: HeroeComponent},
-  {path:"**", component: HeroesComponent},
+  {path:'', component: HeaderComponent},
+  {path:'heroes', component: HeaderComponent},
+  {path:'heroe/:id', component: HeroeComponent},
+  {path:'heroe/:nombre', component: HeroeComponent},
+  {path:'**', component: HeaderComponent},
 ];
 
 @NgModule({

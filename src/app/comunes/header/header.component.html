@@ -19,9 +19,17 @@
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit">Buscar</button>
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" (keypress)="(textobusqueda.value)" (keyup)="cargar(textobusqueda.value.toLowerCase())" #textobusqueda>
+        <button class="btn btn-outline-primary" type="button" (click)="buscar()">Buscar</button>
       </form>
     </div>
   </div>
 </nav>
+
+<div class="container mt-2">
+  <p class="fs-1">Héroes <small class="fs-2 text-muted">Marvel y DC</small></p>
+  <hr>
+  <div class="row row-cols-3 row-cols-md-3 g-4">
+    <app-heroes [nuevo]="heroe" [codigo]="heroe.id" *ngFor="let heroe of resultado;"></app-heroes>
+  </div>
+</div>

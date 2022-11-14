@@ -1,20 +1,20 @@
 <div class="container mt-3">
-    <h1 class="fs-1 text-uppercase">{{heroes[id].nombre}} <small class="display-6">({{heroes[id].aparicion.slice(0,4)}})</small> </h1>
+    <h1 class="fs-1 text-uppercase">{{nombreDetalle}} <small class="display-6">({{aparicionDetalle | date: 'y'}})</small> </h1>
 </div>
 <div class="row" style="margin-right: 200px;">
     <div class="col d-flex justify-content-end">
         <div>
-            <img [src]="heroes[id].img" alt="">
+            <img [src]="imgDetalle" alt="">
             <div class="d-grid gap-2 mt-3">
                 <button [routerLink]="['/heroes']" type="button" class="btn btn-outline-danger btn-block">Regresar</button>
             </div>
         </div>
     </div>
     <div class="col">
-        <h1>{{heroes[id].nombre}}</h1>
+        <h1>{{nombreDetalle}}</h1>
         <hr>
-        <p>{{heroes[id].bio}}</p>
-        <img *ngIf="heroes[id].casa === 'DC'" src="/assets/img/DC.jpg" class="img-logo">
-        <img *ngIf="heroes[id].casa === 'Marvel'" src="/assets/img/marvel.png" class="img-logo" width="640" height="400">
+        <p>{{bioDetalle}}</p>
+        <img *ngIf="casaDetalle === 'DC'" src="/assets/img/DC.jpg" class="img-logo">
+        <img *ngIf="casaDetalle === 'Marvel'" src="/assets/img/marvel.png" class="img-logo" width="640" height="400">
     </div>
 </div>
